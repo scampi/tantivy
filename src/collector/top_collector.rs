@@ -172,7 +172,7 @@ impl<T: PartialOrd + Clone> TopSegmentCollector<T> {
             .map(|comparable_doc| {
                 (
                     comparable_doc.feature,
-                    DocAddress(segment_id, comparable_doc.doc),
+                    DocAddress::new(segment_id, comparable_doc.doc),
                 )
             })
             .collect()

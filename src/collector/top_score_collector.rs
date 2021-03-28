@@ -672,7 +672,7 @@ impl Collector for TopDocs {
         let fruit = heap
             .into_sorted_vec()
             .into_iter()
-            .map(|cid| (cid.feature, DocAddress(segment_ord, cid.doc)))
+            .map(|cid| (cid.feature, DocAddress::new(segment_ord, cid.doc)))
             .collect();
         Ok(fruit)
     }
